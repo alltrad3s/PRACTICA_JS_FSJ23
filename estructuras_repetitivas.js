@@ -67,3 +67,46 @@ for(let posicion = 0; posicion < arreglo_empleados.length; posicion++){
     console.log("Sueldo anterior: " + salario);
     console.log("Sueldo con aumento: " + aumento_salario);
 }
+
+
+//Imprimir todos los datos de un array con un bucle
+
+
+//While
+//mientras (se cumpla esto) { hace esto}
+/*
+while(contador < longanismo){
+    console.log(arraycito[contador]); //2
+    contador++; // 3
+    }
+   
+   //Do While HACER MIENTRAS
+
+do{
+    console.log(arraycito[contador]); //3
+    contador++;//4
+}while(contador < longanismo && contador >= 3) //1 < 6*/
+
+//1era vuelta
+//INICIALIZACION -> CONDICION -> EJECUCION -> incremento
+
+//2da vuelta
+//CONDICION -> EJECUCION -> INCREMENTO
+/*let auxiliar = 0;
+
+for(let i = 0; i < longanismo;i++ ){
+    console.log(arraycito[i]);
+    auxiliar++;
+}
+console.log(auxiliar);*/
+
+let arraycito = [1,2,3];
+
+let longanismo = arraycito.length; //3
+let contador = 0;
+
+//Imprimir el array de forma descendente
+for(let i = longanismo-1; i>=0; i--){
+    console.log(arraycito[i]); //
+}
+longanismo //3
