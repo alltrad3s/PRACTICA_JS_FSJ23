@@ -101,3 +101,6 @@ function calcularAumentoSalario(categoria, sueldo){
 let categoria_value = prompt("Ingrese una categoria")
 let sueldo_value = prompt("Ingresa tu salario")
 console.log(calcularAumentoSalario(categoria_value, sueldo_value));
+
+
+

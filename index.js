@@ -27,6 +27,7 @@ let persona = {
     telefono: 6543125,
     completado: false
 }
+
 //declarando un arreglo(coleccion de datos)
 let frutas = ["manzana","uvas","naranja"]
 console.log(frutas);
