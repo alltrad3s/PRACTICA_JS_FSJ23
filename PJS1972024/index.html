@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--
+    <p>Hola Muchacho</p>
+    <input type="text" id="fullname" placeholder="Hable!">
+    <button type="button" onclick="showMessage()">Oi, mate!</button>
+
+    <input type="number" id="age" placeholder="Add Age">
+    <button type="button" onclick="showAge()">Age!</button>
+-->
+<!--
+    <input type="radio" name="radioGroup" id="radio1" value="Opcion 1">
+    <label for="radio1">Opcion 1</label>
+
+    <input type="radio" name="radioGroup" id="radio2" value="Opcion 2">
+    <label for="radio2">Opcion 2</label>
+
+    <input type="radio" name="radioGroup" id="radio3" value="Opcion 3">
+    <label for="radio3">Opcion 3</label>
+
+    <button type="button" onclick="getRadio()">Voy!</button>
+-->
+
+    <form onsubmit="validateForm(event)">
+        <input type="text" name="fullname" id="fullname" placeholder="Add Name">
+
+        <select name="gender" id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <input type="text" id="email" name="email" placeholder="Add Email">
+
+        <button type="submit">Send</button>
+    </form>
+
+    <script src="./JS/main.js"></script>
+</body>
+</html>

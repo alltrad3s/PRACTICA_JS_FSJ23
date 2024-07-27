@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="h-full bg-white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios DOM Jul 23, 2024</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-full">
+    <div>
+        <!-- Static sidebar for desktop -->
+        <div class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
+          <!-- Sidebar component, swap this element with another sidebar if you like -->
+          <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6">
+            <div class="flex h-16 shrink-0 items-center">
+                <h2 class="text-2xl tracking-tight text-white">DOM Ejercicios</h2>
+            </div>
+            <nav class="flex flex-1 flex-col">
+              <ul role="list" class="flex flex-1 flex-col gap-y-7">
+                <li>
+                  <ul role="list" class="-mx-2 space-y-1">
+                    <li>
+                      <!-- Current: "bg-gray-800 text-white", Default: "text-gray-400 hover:text-white hover:bg-gray-800" -->
+                      <a href="#ejercicio-1" class="group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-gray-800 hover:text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 shrink-0">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z" />
+                        </svg>                          
+                        Ejercicio 1
+                      </a>
+                    </li>
+                    <li>
+                        <a href="#ejercicio-2" class="group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-gray-800 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 shrink-0">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z" />
+                            </svg>                          
+                            Ejercicio 2
+                          </a>
+                    </li>
+                    <li>
+                        <a href="#ejercicio-3" class="group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-gray-800 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 shrink-0">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z" />
+                            </svg>                          
+                            Ejercicio 3
+                          </a>
+                    </li>
+                    <li>
+                        <a href="#ejercicio-4" class="group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-gray-800 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 shrink-0">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z" />
+                            </svg>                          
+                            Ejercicio 4
+                          </a>
+                    </li>
+                    <li>
+                        <a href="#ejercicio-5" class="group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-gray-800 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 shrink-0">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z" />
+                            </svg>                          
+                            Ejercicio 5
+                          </a>
+                    </li>
+                    <li>
+                        <a href="#ejercicio-6" class="group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-gray-800 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 shrink-0">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z" />
+                            </svg>                          
+                            Ejercicio 6
+                          </a>
+                    </li>
+                    <li>
+                        <a href="#ejercicio-7" class="group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-gray-800 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 shrink-0">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z" />
+                            </svg>                          
+                            Ejercicio 7
+                          </a>
+                    </li>
+                    <li>
+                        <a href="#ejercicio-8" class="group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-gray-800 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 shrink-0">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z" />
+                            </svg>                          
+                            Ejercicio 8
+                          </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="-mx-6 mt-auto">
+                  <a href="#" class="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-white hover:bg-gray-800">
+                    <img class="h-8 w-8 rounded-full bg-gray-800" src="https://1.gravatar.com/avatar/8f78127dd618ee5e5d0a4a2ee928b6088df871118ed0cacbf7201452af323e1d?size=256" alt="">
+                    <span class="sr-only">Your profile</span>
+                    <span aria-hidden="true">Jorge Diaz</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      
+        <div class="sticky top-0 z-40 flex items-center gap-x-6 bg-gray-900 px-4 py-4 shadow-sm sm:px-6 lg:hidden">
+          <button type="button" class="-m-2.5 p-2.5 text-gray-400 lg:hidden">
+            <span class="sr-only">Open sidebar</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+          <div class="flex-1 text-sm font-semibold leading-6 text-white">Dashboard</div>
+          <a href="#">
+            <span class="sr-only">Your profile</span>
+            <img class="h-8 w-8 rounded-full bg-gray-800" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+          </a>
+        </div>
+      
+        <main class="py-10 lg:pl-72">
+          <div class="px-4 sm:px-6 lg:px-8">
+            <!-- Ejerciocio 1 -->
+            <div class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow-lg">
+                <div class="px-4 py-5 sm:px-6">
+                    <h3 class="text-base font-semibold leading-6 text-gray-900" id="ejercicio-1">Ejercicio 1: Cambio de Estilo Dinámico</h3>
+                    <p class="mt-1 text-sm text-gray-500">Crea una página con tres botones: "Rojo", "Verde" y "Azul". Al hacer clic en cada botón,
+                        cambia el color de fondo de un elemento de la página a rojo, verde o azul, respectivamente.</p>
+                </div>
+                <div class="px-4 py-5 sm:p-6">
+                    <h2><strong id="exColor">Cambio de color</strong></h2>
+                    <button id="greenBtn" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+                        Click Green!
+                    </button>
+                    <button id="redBtn" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">
+                        Click Red!
+                    </button>
+                    <button id="blueBtn" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                        Click Blue!
+                    </button>
+                </div>
+            </div>
+            <!-- Ejerciocio 2 -->
+            <div class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow-lg mt-10">
+                <div class="px-4 py-5 sm:px-6">
+                    <h3 class="text-base font-semibold leading-6 text-gray-900" id="ejercicio-2">Ejercicio 2: Creación de Elementos</h3>
+                    <p class="mt-1 text-sm text-gray-500">Diseña una lista de tareas pendientes. Agrega un campo de entrada y un botón "Agregar
+                        Tarea". Al hacer clic en el botón, crea dinámicamente un nuevo elemento de lista (por
+                        ejemplo, un &lt;li&gt;) con el contenido del campo de entrada y agrégalo a la lista.</p>
+                </div>
+                <div class="px-4 py-5 sm:p-6">
+                  <!-- Content goes here -->
+                </div>
+            </div>
+            <!-- Ejerciocio 3 -->
+            <div class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow-lg mt-10">
+                <div class="px-4 py-5 sm:px-6">
+                    <h3 class="text-base font-semibold leading-6 text-gray-900" id="ejercicio-3">Ejercicio 3: Eliminación de Elementos</h3>
+                    <p class="mt-1 text-sm text-gray-500">Crea una lista de imágenes. Al hacer clic en una imagen, elimínala dinámicamente de la lista.</p>
+                </div>
+                <div class="px-4 py-5 sm:p-6">
+                  <!-- Content goes here -->
+                </div>
+            </div>
+            <!-- Ejerciocio 4 -->
+            <div class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow-lg mt-10">
+                <div class="px-4 py-5 sm:px-6">
+                    <h3 class="text-base font-semibold leading-6 text-gray-900" id="ejercicio-4">Ejercicio 4: Evento de Teclado</h3>
+                    <p class="mt-1 text-sm text-gray-500">Crea un cuadro de texto que muestre dinámicamente el texto ingresado en un elemento de
+                        párrafo a medida que se escribe.</p>
+                </div>
+                <div class="px-4 py-5 sm:p-6">
+                  <!-- Content goes here -->
+                </div>
+            </div>
+            <!-- Ejerciocio 5 -->
+            <div class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow-lg mt-10">
+                <div class="px-4 py-5 sm:px-6">
+                    <h3 class="text-base font-semibold leading-6 text-gray-900" id="ejercicio-5">Ejercicio 5: Cambio de Clase CSS</h3>
+                    <p class="mt-1 text-sm text-gray-500">Crea una galería de imágenes. Al hacer clic en una imagen, cambia dinámicamente su estilo
+                        aplicándole una clase CSS que destaque la imagen seleccionada.</p>
+                </div>
+                <div class="px-4 py-5 sm:p-6">
+                  <!-- Content goes here -->
+                </div>
+            </div>
+            <!-- Ejerciocio 6 -->
+            <div class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow-lg mt-10">
+                <div class="px-4 py-5 sm:px-6">
+                    <h3 class="text-base font-semibold leading-6 text-gray-900" id="ejercicio-6">Ejercicio 6: Animación de Elemento</h3>
+                    <p class="mt-1 text-sm text-gray-500">Crea un botón que, al hacer clic, desplace suavemente un elemento de la página a una
+                        posición diferente utilizando una animación.</p>
+                </div>
+                <div class="px-4 py-5 sm:p-6">
+                  <!-- Content goes here -->
+                </div>
+            </div>
+            <!-- Ejerciocio 7 -->
+            <div class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow-lg mt-10">
+                <div class="px-4 py-5 sm:px-6">
+                    <h3 class="text-base font-semibold leading-6 text-gray-900" id="ejercicio-7">Ejercicio 7: Obtención de Atributos</h3>
+                    <p class="mt-1 text-sm text-gray-500">Diseña una galería de imágenes con miniaturas. Al hacer clic en una miniatura, muestra
+                        dinámicamente la imagen completa en un área designada y muestra una alerta con la
+                        descripción de la imagen obtenida de un atributo personalizado.</p>
+                </div>
+                <div class="px-4 py-5 sm:p-6">
+                  <!-- Content goes here -->
+                </div>
+            </div>
+            <!-- Ejerciocio 8 -->
+            <div class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow-lg mt-10">
+                <div class="px-4 py-5 sm:px-6">
+                    <h3 class="text-base font-semibold leading-6 text-gray-900" id="ejercicio-8">Ejercicio 8: Contador de Clicks</h3>
+                    <p class="mt-1 text-sm text-gray-500">Crea un juego sencillo donde un botón cuenta los clics realizados. Muestra dinámicamente
+                        el número de clics y felicita al jugador cuando alcanza cierta cantidad.</p>
+                </div>
+                <div class="px-4 py-5 sm:p-6">
+                    <div id="clickCount" class="text-4xl font-bold">0</div>
+                    <div id="message" class="text-green-500 italic font-semibold mt-2"></div>
+                    <button id="clickButton" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                        Click Me!
+                    </button>
+                </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <script src="./main.js"></script>
+</body>
+</html>
